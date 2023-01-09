@@ -24,7 +24,9 @@ class _PokemonDataState extends State<PokemonData> {
         ),
         Text(
           widget.data,
-          style: const TextStyle(fontSize: 18),
+          style: const TextStyle(
+            fontSize: 18,
+          ),
           textAlign: TextAlign.right,
         ),
       ],

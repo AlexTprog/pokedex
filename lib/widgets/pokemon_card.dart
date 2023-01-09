@@ -31,7 +31,9 @@ class _PokemonCardState extends State<PokemonCard> {
         children: [
           Text(
             widget.pokemon.name.toString(),
-            style: const TextStyle(fontSize: 35),
+            style: const TextStyle(
+              fontSize: 35,
+            ),
           ),
           Image.network(
             widget.pokemon.sprite.toString(),

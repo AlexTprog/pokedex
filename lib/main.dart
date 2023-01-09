@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokedex/config/theme.dart';
 import 'package:pokedex/screens/home.dart';
 
 void main() {
@@ -10,8 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Pokedex',
+      theme: theme(),
       home: Home(),
     );
   }
