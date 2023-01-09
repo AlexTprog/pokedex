@@ -16,6 +16,7 @@ class _PokemonCardState extends State<PokemonCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(12),
       width: 300,
       margin: const EdgeInsets.symmetric(
         vertical: 30,
@@ -29,10 +30,17 @@ class _PokemonCardState extends State<PokemonCard> {
       ),
       child: Column(
         children: [
-          Text(
-            widget.pokemon.name.toString(),
-            style: const TextStyle(
-              fontSize: 35,
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 40),
+            color: Colors.black,
+            child: Text(
+              //Primera letra en mayuscula
+              widget.pokemon.name.toString().replaceRange(0, 1,
+                  widget.pokemon.name.toString().substring(0, 1).toUpperCase()),
+              style: const TextStyle(
+                fontSize: 35,
+                color: Colors.white,
+              ),
             ),
           ),
           Image.network(
